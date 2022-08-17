@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  database:
+    image: 'mysql:5.7'
+    container_name: tasksSpringAPI
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3306:3306
+    volumes:
+      - tasksSpringAPI:/var/lib/mysql
+volumes:
+  tasksSpringAPI:
